@@ -1,0 +1,29 @@
+
+@import "fontface.scss";
+@import "colors.scss";
+@import "pattern.scss";
+@import "home/_all.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+  font-family: 'Poppins';
+
+  body {
+    background-color: #fbfbfb;
+  }
+
+  a {
+  	transition: 0.4s;
+  	text-decoration: none;
+  	cursor: pointer;
+  }
+}

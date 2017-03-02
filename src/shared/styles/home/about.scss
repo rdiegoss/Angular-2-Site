@@ -1,0 +1,44 @@
+.about-section_page {
+	padding: 3rem 0;
+
+	.col-grid {
+
+		&.thumb-col {
+			max-width: 400px;
+			width: 100%;
+			border-radius: 10px;
+
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		&.text-col {
+			width: 100%;
+			padding: 0 0 0 25px;
+
+			h2 {
+				text-transform: uppercase;
+				color: $primary-color;
+				font-size: 1.5rem;
+				font-weight: 600;
+			}
+
+			p {
+				color: $color-graphite;
+				line-height: 27px;
+				font-size: 1rem;
+				margin: 0 0 15px;
+			}
+
+			@media(max-width: 450px) {
+				padding: 25px 0 0 0;
+			}
+
+		}
+
+	}
+
+}

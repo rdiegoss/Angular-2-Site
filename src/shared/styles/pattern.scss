@@ -1,0 +1,28 @@
+
+.content {
+	display: block;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 25px;
+	width: 100%;
+}
+
+.flex-grid_row {
+	display: flex;
+	flex-flow: no-wrap;
+	justify-content: space-between;
+
+	@media(max-width: 450px) {
+		flex-flow: column;
+	}
+}
+
+// Menu fixo on scroll
+.fixed {
+	.menu-content.second-menu {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	}
+}

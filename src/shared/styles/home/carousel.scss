@@ -1,0 +1,131 @@
+.carousel-items {
+	padding: 12rem 0px 3rem;
+
+	@media(max-width: 800px) {
+		padding: 6rem 0px;
+	}
+
+	@media(max-width: 500px) {
+		padding: 4rem 0px 5rem;
+	}
+
+	.content {
+		position: relative;
+	}
+
+	.myslides {
+		overflow: hidden;
+	}
+
+	.swiper-container {
+	    width: 100%;
+	    height: 100%;
+
+			.swiper-pagination {
+			    z-index: 10;
+			    position: absolute;
+			    width: 100%;
+			    display: flex;
+			    height: 25px;
+			    justify-content: center;
+			    padding: 5px 0;
+					transform: translate(-25px,25px);
+					@media(min-width: 1260px) {
+						display: none;
+					}
+
+					.swiper-pagination-bullet {
+						background: #ccc;
+						border-radius: 100%;
+						display: block;
+						height: 15px;
+				    margin: 0 5px;
+						width: 15px;
+
+						&.swiper-pagination-bullet-active {
+							background: $primary-color;
+						}
+					}
+			}
+	}
+
+	.swiper-wrapper {
+		box-sizing: content-box;
+		display: flex;
+		height: 100%;
+		position: relative;
+		transition-property: transform;
+		z-index: 1;
+
+		.swiper-slide {
+			text-align: center;
+	    font-size: 18px;
+	    display: table;
+
+			.box-item {
+				border-radius: 10px;
+		    background: #fff;
+		    overflow: hidden;
+				.box-text {
+						padding: 25px;
+						text-align: left;
+
+						h2 {
+							color: $secondary-color;
+							font-weight: 600;
+							font-size: 1.3rem;
+							line-height: 20px;
+							line-height: 30px;
+							margin: 0 0 10px;
+						}
+						p {
+							color: $color-graphite-light;
+							line-height: 30px;
+							font-size: 1rem;
+						}
+				}
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translate(0,-50%);
+    z-index: 5;
+	}
+
+	.next-btn {
+		right: -30px;
+		left: initial;
+	}
+
+	button {
+		background: transparent;
+		border: 0;
+		height: 50px;
+		width: 50px;
+		svg {
+			height: 50px;
+			width: 50px;
+			fill: $primary-color;
+		}
+
+		&:focus {
+			outline: none;
+			border: 0;
+		}
+
+		@media(max-width: 1260px) {
+			display: none;
+		}
+
+	}
+
+}

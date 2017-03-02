@@ -1,0 +1,155 @@
+
+header {}
+
+// Component
+.menu-content {
+	position: absolute;
+	width: 100%;
+	font-family: 'Poppins';
+	padding: 30px 0;
+
+	.menu-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 0 25px;
+		width: 100%;
+		align-items: center;
+		position: relative;
+    z-index: 100;
+
+		h1 {
+			padding: 10px 0;
+			a {
+				display: block;
+				height: 65px;
+			}
+		}
+
+		nav {
+			display: flex;
+			justify-content: flex-end;
+
+			a {
+			    display: block;
+			    padding: 20px;
+			    color: #fff;
+			    font-size: 0.8rem;
+			    font-weight: 500;
+			    text-transform: uppercase;
+			    margin: 0 5px;
+			    position: relative;
+
+			    &:after {
+			    	bottom: 25%;
+					background: $primary-color;
+					color: #fff;
+			    	content: "";
+			    	height: 4px;
+			    	left: 50%;
+			    	position: absolute;
+			    	width: 0;
+			    	transform: translate(-50%, 0%);
+			    	transition: all 0.5s;
+			    	z-index: 0;
+			    }
+
+			    &.active {
+				    &:after {
+			    		width: 30%;
+			    	}
+			    }
+
+			    &:hover {
+			    	color: $color-white;
+
+			    	&:after {
+			    		width: 80%;
+			    	}
+			    }
+
+			}
+		}
+
+		&.second-menu {
+			background-color: $primary-color;
+		}
+
+		.menu-mobile {
+			display: none;
+			button {
+				background: transparent;
+				border: 0;
+				max-width: 70px;
+				width: 100%;
+			}
+
+			.open-menu {
+				display: block;
+			}
+			.close-menu {
+				display: none;
+			}
+
+			&.menu-opened {
+				.close-menu {
+					display: block;
+				}
+				.open-menu {
+					display: none;
+				}
+			}
+
+		}
+
+	}
+
+	@media(max-width: 800px) {
+		.menu-wrapper {
+			.menu-mobile {
+				display: block;
+			}
+			nav {
+				display: none;
+			}
+		}
+	}
+
+	&.second-menu {
+		background-color: $primary-color;
+		padding: 10px 0;
+		position: absolute;;
+		display: flex;
+		align-items: center;
+
+		@media(max-width: 800px){
+			top: 0;
+			transform: translate(0,-100%);
+			padding: 145px 0 0;
+			transition: 0.5s;
+			h1 {
+				display: none;
+			}
+			nav {
+				display: block;
+				padding: 0 0 5rem;
+				transform: translate(0px,0px);
+				text-align: center;
+				top: 140px;
+				width: 100%;
+			}
+		}
+	}
+
+
+}
+
+// Open menu mobile
+main {
+	&.menu-opened {
+		.menu-content.second-menu {
+			transform: translate(0px,0px);
+		}
+	}
+}
