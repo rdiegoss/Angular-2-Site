@@ -50,7 +50,6 @@ import { DOCUMENT } from '@angular/platform-browser';
 
 	<footer class="footer">
 		<div class="footer-content">
-			<p>© 2016 Created by Joyjet Digital Space Agency</p>
 		</div>
 	</footer>
   `
